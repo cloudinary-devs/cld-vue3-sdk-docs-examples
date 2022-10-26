@@ -2,6 +2,7 @@
 import QuickStart from './components/QuickStart.vue';
 import FullExample from './components/FullExample.vue';
 import AssetInstance from './components/AssetInstance.vue';
+import ImageTransformations from './components/ImageTransformations.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import AssetInstance from './components/AssetInstance.vue';
   <QuickStart />
   <FullExample />
   <AssetInstance />
+  <ImageTransformations />
 </template>
 
 <style>
