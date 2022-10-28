@@ -9,6 +9,7 @@ import Responsive from './components/Responsive.vue';
 import Accessibility from './components/Accessibility.vue';
 import Placeholder from './components/Placeholder.vue';
 import LazyLoadPlaceholder from './components/LazyLoadPlaceholder.vue';
+import Effects from './components/Effects.vue';
 </script>
 
 <template>
@@ -25,6 +26,7 @@ import LazyLoadPlaceholder from './components/LazyLoadPlaceholder.vue';
   <Accessibility />
   <Placeholder />
   <LazyLoadPlaceholder />
+  <Effects />
 </template>
 
 <style>
