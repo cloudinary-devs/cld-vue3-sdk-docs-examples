@@ -29,6 +29,6 @@ export default {
   <div class="App-body">
     <h3>Use the lazyload plugin to delay loading the image until it reaches the
       viewport, as shown in<br><a class="App-link" href="https://cloudinary.com/documentation/vue_image_transformations#lazy_loading" target="_blank">Lazy loading</a></h3>
-    <AdvancedImage :width="759" :height="400" :cldImg="myImg" :plugins="plugins"/>
+    <AdvancedImage :cldImg="myImg" :plugins="plugins"/>
   </div>
 </template>
