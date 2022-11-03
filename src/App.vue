@@ -14,6 +14,7 @@ import DeliveryType from './components/DeliveryType.vue';
 import TransformingYourImage from './components/TransformingYourImage.vue';
 import ChainingTransformations from './components/ChainingTransformations.vue';
 import ResizingAndCropping from './components/ResizingAndCropping.vue';
+import AutoGravity from './components/AutoGravity.vue';
 import ConvertingFormatExtension from './components/ConvertingFormatExtension.vue';
 import ConvertingFormatDelivery from './components/ConvertingFormatDelivery.vue';
 import AutoFormat from './components/AutoFormat.vue';
@@ -41,6 +42,7 @@ import ImageOptimizations from './components/ImageOptimizations.vue';
   <TransformingYourImage />
   <ChainingTransformations />
   <ResizingAndCropping />
+  <AutoGravity />
   <ConvertingFormatExtension />
   <ConvertingFormatDelivery />
   <AutoFormat />
