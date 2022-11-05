@@ -19,7 +19,7 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'front_face'.
 const myImg = cld.image('front_face');
 
-// Resize to 250 x 250 pixels using the 'fill' crop mode.
+ // Apply the transformation.
 myImg
 .resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())))  // Crop the image, focusing on the face.
   .roundCorners(byRadius(20));    // Round the corners.
