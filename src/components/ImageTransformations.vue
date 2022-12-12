@@ -1,5 +1,5 @@
 <script>
-import { AdvancedImage } from '@cloudinary/vue3';
+import { AdvancedImage } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 // Import required actions and qualifiers.

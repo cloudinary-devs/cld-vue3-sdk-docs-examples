@@ -1,5 +1,5 @@
 <script>
-import { AdvancedImage, lazyload, placeholder } from '@cloudinary/vue3';
+import { AdvancedImage, lazyload, placeholder } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 // Create a Cloudinary instance and set your cloud name.

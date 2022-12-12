@@ -1,5 +1,5 @@
 <script>
-import { AdvancedImage } from '@cloudinary/vue3';
+import { AdvancedImage } from '@cloudinary/vue';
 import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from "@cloudinary/url-gen/actions/resize";
 import {outline, cartoonify} from "@cloudinary/url-gen/actions/effect";
