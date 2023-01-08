@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "@cloudinary/url-gen": "^1.8.6",
-    "@cloudinary/vue": "^1.7.0",
-    "vue": "^3.2.38"
+    "@cloudinary/vue": "^1.8.0",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

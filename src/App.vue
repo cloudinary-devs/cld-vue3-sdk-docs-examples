@@ -21,6 +21,7 @@ import AutoFormat from './components/AutoFormat.vue';
 import Effects from './components/Effects.vue';
 import Overlays from './components/Overlays.vue';
 import ImageOptimizations from './components/ImageOptimizations.vue';
+import VideoTransformations from './components/VideoTransformations.vue';
 </script>
 
 <template>
@@ -49,6 +50,7 @@ import ImageOptimizations from './components/ImageOptimizations.vue';
   <Effects />
   <Overlays />
   <ImageOptimizations />
+  <VideoTransformations />
 </template>
 
 <style>
