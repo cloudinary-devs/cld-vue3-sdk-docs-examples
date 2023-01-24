@@ -1,5 +1,7 @@
 <script setup>
 import VideoTransformations from '../components/VideoTransformations.vue';
+import VideoPoster from '../components/VideoPoster.vue';
+import VideoPosterAuto from '../components/VideoPosterAuto.vue';
 import AdvancedVideoProperties from '../components/AdvancedVideoProperties.vue';
 import TransformingYourVideo from '../components/TransformingYourVideo.vue';
 import VideoExample1 from '../components/VideoExample1.vue';
@@ -11,6 +13,8 @@ import VideoExample2 from '../components/VideoExample2.vue';
   <h1>Video Transformations</h1>
   </div>
   <VideoTransformations />
+  <VideoPoster />
+  <VideoPosterAuto />
   <AdvancedVideoProperties />
   <TransformingYourVideo />
   <VideoExample1 />
