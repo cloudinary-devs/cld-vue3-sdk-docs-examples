@@ -1,6 +1,7 @@
 <script setup>
 import QuickStart from '../components/QuickStart.vue';
 import FullExample from '../components/FullExample.vue';
+import QuickExample from '../components/QuickExample.vue';
 import ImageTransformations from '../components/ImageTransformations.vue';
 import AssetInstance from '../components/AssetInstance.vue';
 import Plugins from '../components/Plugins.vue';
@@ -28,6 +29,7 @@ import ImageOptimizations from '../components/ImageOptimizations.vue';
   <h1>Image Transformations</h1>
   </div>
   <QuickStart />
+  <QuickExample />
   <FullExample />
   <ImageTransformations />
   <AssetInstance />
