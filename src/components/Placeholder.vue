@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { AdvancedImage, placeholder } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
@@ -12,23 +12,24 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'docs/grizzly'.
 const myImg = cld.image('docs/grizzly');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-        plugins: [placeholder({mode: 'blur'})],
-        myImg,
-    };
-  },
-};
+// Define plugins.
+const plugins = [placeholder({ mode: 'blur' })];
+
 </script>
 
 <template>
   <div class="App-body">
-    <h3>Use the placeholder plugin to show a blurred image while the image loads, as shown in<br>
-        <a class="App-link" href="https://cloudinary.com/documentation/vue_image_transformations#image_placeholders" target="_blank">Image placeholders</a></h3>
-    <AdvancedImage :cldImg="myImg" :plugins="plugins"/>
+    <h3>
+      Use the placeholder plugin to show a blurred image while the image loads, as shown in
+      <br />
+      <a
+        class="App-link"
+        href="https://cloudinary.com/documentation/vue_image_transformations#image_placeholders"
+        target="_blank"
+      >
+        Image placeholders
+      </a>
+    </h3>
+    <AdvancedImage :cldImg="myImg" :plugins="plugins" />
   </div>
 </template>

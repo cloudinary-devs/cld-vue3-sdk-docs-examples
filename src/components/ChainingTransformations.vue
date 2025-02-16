@@ -1,19 +1,19 @@
-<script>
+<script setup>
 import { AdvancedImage } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 // Import required actions.
-import {fill} from "@cloudinary/url-gen/actions/resize";
-import {source} from "@cloudinary/url-gen/actions/overlay";
-import {byAngle} from "@cloudinary/url-gen/actions/rotate"
-import {sepia} from "@cloudinary/url-gen/actions/effect";
-import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { source } from "@cloudinary/url-gen/actions/overlay";
+import { byAngle } from "@cloudinary/url-gen/actions/rotate";
+import { sepia } from "@cloudinary/url-gen/actions/effect";
+import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
 
 // Import required values.
-import {text} from "@cloudinary/url-gen/qualifiers/source";
-import {Position} from "@cloudinary/url-gen/qualifiers/position";
-import {TextStyle} from "@cloudinary/url-gen/qualifiers/textStyle";
-import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
+import { text } from "@cloudinary/url-gen/qualifiers/source";
+import { Position } from "@cloudinary/url-gen/qualifiers/position";
+import { TextStyle } from "@cloudinary/url-gen/qualifiers/textStyle";
+import { compass } from "@cloudinary/url-gen/qualifiers/gravity";
 
 // Create a Cloudinary instance and set your cloud name.
 const cld = new Cloudinary({
@@ -32,29 +32,29 @@ myImg
     .effect(sepia())
     .overlay(   
         source(
-        text('This is my picture', new TextStyle('arial',18))
+        text('This is my picture', new TextStyle('arial', 18))
         .textColor('white')      
         )
-        .position(new Position().gravity(compass('north')).offsetY(20)))
+        .position(new Position().gravity(compass('north')).offsetY(20))
+    )
     .rotate(byAngle(20))
     .format('png');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-      myImg,
-    };
-  },
-};
 </script>
 
 <template>
   <div class="App-body">
-    <h3>Chain several transformations together, as shown in<br><a class="App-link" href="https://cloudinary.com/documentation/vue_image_transformations#chaining_transformations" target="_blank">Chaining transformations</a></h3>
+    <h3>
+      Chain several transformations together, as shown in
+      <br />
+      <a
+        class="App-link"
+        href="https://cloudinary.com/documentation/vue_image_transformations#chaining_transformations"
+        target="_blank"
+      >
+        Chaining transformations
+      </a>
+    </h3>
     <AdvancedImage :cldImg="myImg" />
   </div>
 </template>
-

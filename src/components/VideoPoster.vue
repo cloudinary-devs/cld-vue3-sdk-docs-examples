@@ -1,15 +1,13 @@
-<script>
+<script setup>
 import { AdvancedVideo } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
 // Import required actions and qualifiers.
-import {fill} from "@cloudinary/url-gen/actions/resize";
-import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
-import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
-import {Gravity} from "@cloudinary/url-gen/qualifiers";
-import {AutoFocus} from "@cloudinary/url-gen/qualifiers/autoFocus";
-
-
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { byRadius } from "@cloudinary/url-gen/actions/roundCorners";
+import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
+import { Gravity } from "@cloudinary/url-gen/qualifiers";
+import { AutoFocus } from "@cloudinary/url-gen/qualifiers/autoFocus";
 
 // Create a Cloudinary instance and set your cloud name.
 const cld = new Cloudinary({
@@ -17,43 +15,52 @@ const cld = new Cloudinary({
     cloudName: 'demo',
   },
   url: {
-      analytics: false,
-    }
+    analytics: false,
+  },
 });
 
 // Use the video with public ID, 'docs/walking_talking'.
 const myVideo = cld.video('docs/walking_talking');
 
 // Apply the transformation.
-myVideo.resize(fill().width(150).height(150)
-    .gravity(Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces())))) // Crop the video, focusing on the faces.
-    .roundCorners(byRadius(20));    // Round the corners.
+myVideo
+  .resize(
+    fill()
+      .width(150)
+      .height(150)
+      .gravity(Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces())))
+  ) // Crop the video, focusing on the faces.
+  .roundCorners(byRadius(20)); // Round the corners.
 
 // Use the same video for the poster.
 const myVideoPoster = cld.video('docs/walking_talking');
 
 // Apply the same transformation to the poster plus format JPG.
-myVideoPoster.resize(fill().width(150).height(150)
-    .gravity(Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces())))) // Crop the video, focusing on the faces.
-    .roundCorners(byRadius(20))  // Round the corners.
-    .format('jpg');    // Change the format to JPG.
+myVideoPoster
+  .resize(
+    fill()
+      .width(150)
+      .height(150)
+      .gravity(Gravity.autoGravity().autoFocus(AutoFocus.focusOn(FocusOn.faces())))
+  ) // Crop the video, focusing on the faces.
+  .roundCorners(byRadius(20)) // Round the corners.
+  .format('jpg'); // Change the format to JPG.
 
-export default {
-  components: {
-    AdvancedVideo,
-  },
-  data() {
-    return {
-      myVideo,
-      myVideoPoster
-    };
-  },
-};
 </script>
 
 <template>
   <div class="App-body">
-    <h3>Set the cldPoster property to the center frame of the video, as shown in <br><a class="App-link" href="https://cloudinary.com/documentation/vue_video_transformations#the_cldposter_property" target="_blank">The cldPoster property</a></h3>
-    <AdvancedVideo :cldVid="myVideo" :cldPoster="myVideoPoster" controls muted/>
+    <h3>
+      Set the cldPoster property to the center frame of the video, as shown in
+      <br />
+      <a
+        class="App-link"
+        href="https://cloudinary.com/documentation/vue_video_transformations#the_cldposter_property"
+        target="_blank"
+      >
+        The cldPoster property
+      </a>
+    </h3>
+    <AdvancedVideo :cldVid="myVideo" :cldPoster="myVideoPoster" controls muted />
   </div>
 </template>

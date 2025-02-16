@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { AdvancedImage } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
@@ -14,25 +14,24 @@ const myImg = cld.image('pond_reflect');
 
 // Request automatic format and quality.
 myImg
-.format('auto')
-.quality('auto');
+  .format('auto')
+  .quality('auto');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-      myImg,
-    };
-  },
-};
 </script>
 
 <template>
   <div class="App-body">
-    <h3>Apply automatic format and quality, as shown in<br><a class="App-link" href="https://cloudinary.com/documentation/vue_image_transformations#image_optimizations" target="_blank">Image optimizations</a></h3>
+    <h3>
+      Apply automatic format and quality, as shown in
+      <br />
+      <a
+        class="App-link"
+        href="https://cloudinary.com/documentation/vue_image_transformations#image_optimizations"
+        target="_blank"
+      >
+        Image optimizations
+      </a>
+    </h3>
     <AdvancedImage :cldImg="myImg" />
   </div>
 </template>
-
